@@ -5,7 +5,9 @@ const pdfRoutes = require('./routes/pdfRoutes');
 require('dotenv').config()
 const app = express();
 const port = 3001;
+const path = require('path')
 
+app.use(express.static(path.join(__dirname, "build")));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
