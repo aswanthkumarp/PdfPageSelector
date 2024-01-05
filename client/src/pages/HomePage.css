@@ -1,0 +1,32 @@
+
+#ResumeContainer {
+    margin: auto;
+    width: 90%;
+  }
+  
+  .PDFDocument {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .PDFPage {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  
+  .PDFPage > canvas {
+    max-width: 100%;
+    height: auto !important;
+  }
+  
+  .checkbox-label {
+    margin-top: 10px;
+  }
+  
+  /* Adjust the checkbox styles as needed */
+  .checkbox-label input {
+    margin-right: 5px;
+  }
+  
