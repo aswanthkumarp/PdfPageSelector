@@ -56,7 +56,7 @@ const HomePage = () => {
       formData.append('file', file);
 
       const response = await axios.post(
-        'http://localhost:3001/upload',
+        'https://pdfpageselector.onrender.com/upload',
         formData
       );
 
@@ -65,7 +65,10 @@ const HomePage = () => {
         selectedPages,
       };
 
-      await axios.post('http://localhost:3001/create-pdf', selectedPagesData);
+      await axios.post(
+        'https://pdfpageselector.onrender.com/create-pdf',
+        selectedPagesData
+      );
       setModalIsOpen(true);
       setPdfCreated(true);
     } catch (error) {
@@ -80,7 +83,7 @@ const HomePage = () => {
   const handleDownload = async () => {
     try {
       const downloadResponse = await axios.post(
-        'http://localhost:3001/download-selected',
+        'https://pdfpageselector.onrender.com/download-selected',
         {
           originalPdf: file.name,
           selectedPages,
